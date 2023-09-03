@@ -2,5 +2,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-    base: '/backend-dummy'
+    base: '/backend-dummy/',
+    trailingSlash: 'ignore'
 });
