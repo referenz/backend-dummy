@@ -1,0 +1,39 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import IBKRows from "../../components/IBKRows.astro";
+import json from '../../data/ibk-liste.json';
+const ibks = Object.entries(json);
+---
+
+<Layout title="Interessenbekundungen">
+  <h2>Interessenbekundungen</h2>
+  <table class="table table-striped table-hover table-sm">
+    <thead>
+      <tr>
+        <th>Dok.-Nr.</th>
+        <th>Träger</th>
+        <th>Projektvorhaben</th>
+        <th>IBK-Verfahren</th>
+        <th>Status</th>
+        <th>Zuletzt geändert</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <IBKRows data={ibks} />
+    </tbody>
+  </table>
+</Layout>
+
+<style>
+  h2 {
+    font-size: 1em;
+  }
+
+  table {
+    font-size: 80%;
+  }
+
+  th {
+    vertical-align: middle;
+  }
+</style>

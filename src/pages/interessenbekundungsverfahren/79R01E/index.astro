@@ -1,0 +1,82 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import Stammdaten from "../../../components/ibk-tabs/Stammdaten.astro";
+import Workflow from "../../../components/ibk-tabs/Workflow.astro";
+import Dokumente from "../../../components/ibk-tabs/Dokumente.astro";
+import Kommunikation from "../../../components/ibk-tabs/Kommunikation.astro";
+---
+
+<Layout title="Interessenbekundung 79R01E">
+  <h2>Interessenbekundung 79R01E</h2>
+
+  <ul class="nav nav-tabs" id="ibk-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="uebersicht-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#uebersicht-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="uebersicht-tab-pane"
+        aria-selected="true">Übersicht</button
+      >
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="workflow-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#workflow-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="workflow-tab-pane"
+        aria-selected="false">Workflow</button
+      >
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="dokumente-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#dokumente-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="dokumente-tab-pane"
+        aria-selected="false">Dokumente</button
+      >
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="kommunikation-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#kommunikation-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="kommunikation-tab-pane"
+        aria-selected="false">Kommunikationsverlauf</button
+      >
+    </li>
+  </ul>
+  <div class="tab-content" id="ibk-tabsContent">
+    <div class="tab-pane fade show active" id="uebersicht-tab-pane" role="tabpanel" aria-labelledby="uebersicht-tab" tabindex="0">
+      <Stammdaten />
+    </div>
+    <div class="tab-pane fade" id="workflow-tab-pane" role="tabpanel" aria-labelledby="workflow-tab" tabindex="0">
+      <Workflow />
+    </div>
+    <div class="tab-pane fade" id="dokumente-tab-pane" role="tabpanel" aria-labelledby="dokumente-tab" tabindex="0">
+      <Dokumente />
+    </div>
+    <div class="tab-pane fade" id="kommunikation-tab-pane" role="tabpanel" aria-labelledby="kommunikation-tab" tabindex="0">
+      <Kommunikation />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  h2 {
+    font-size: 1em;
+  }
+</style>

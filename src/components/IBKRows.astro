@@ -1,0 +1,52 @@
+---
+interface Props {
+    data: [string, string[]][];
+}
+
+const { data } = Astro.props;
+
+function getStatusClass(status: string) {
+    switch (status) {
+        case "Angelegt":
+            return "bg-secondary";
+        case "Sachlich abgelehnt":
+            return "bg-warning text-dark";
+        case "Antragsaufforderung":
+            return "bg-success";
+        default:
+            return "bg-primary";
+    }
+}
+---
+
+{data.map((ibk) => {
+    const items = ibk.flat();
+    const statusClass = getStatusClass(items[4]!);
+    return (
+    <tr>
+        <td class="dok-nr"><a href="interessenbekundungsverfahren/79R01E">{items[0]}</a></td>
+        <td>{items[1]}</td>
+        <td class="projekt">{items[2]}</td>
+        <td>{items[3]}</td>
+        <td class="status"><span class:list={["badge badge-pill", statusClass]}>{items[4]}</span></td>
+        <td>{items[5]}</td>
+    </tr>
+)})}
+
+<style>
+    td.dok-nr {
+        font-weight: bold;
+    }
+
+
+    td.status {
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+    /*
+    .badge {
+        white-space: normal;
+        text-align: left;
+    }
+    */
+</style>
