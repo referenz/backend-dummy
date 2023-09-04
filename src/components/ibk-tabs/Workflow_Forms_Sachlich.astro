@@ -1,0 +1,43 @@
+---
+import ButtonView from "../ButtonView.astro";
+import ButtonPDF from "../ButtonPDF.astro";
+import ButtonEditForm from "../ButtonEditForm.astro";
+---
+
+<table class="table table-light align-middle table-hover">
+  <thead>
+    <tr>
+      <th>Formular</th>
+      <th>Letzte Änderung</th>
+      <th>Status</th>
+      <th>Aktion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Gutachten 1</td><td>2024-06-11, 12:34 Uhr</td><td>Abgeschlossen</td><td
+        ><ButtonView /> {"  "} <ButtonPDF /></td
+      >
+    </tr>
+        <tr>
+      <td>Gutachten 2</td><td>2024-06-14, 19:59 Uhr</td><td>Abgeschlossen</td><td
+        ><ButtonView /> {"  "} <ButtonPDF /></td
+      >
+    </tr>
+        <tr>
+      <td>Votum</td><td>2024-06-28, 18:21 Uhr</td><td>Ausstehend</td><td
+        ><ButtonEditForm />  {"   "} <ButtonView /> {"  "} <ButtonPDF /></td
+      >
+    </tr>
+  </tbody>
+</table>
+
+<p><button type="button" class="btn btn-primary btn-sm">Weiteres Gutachten notwendig</button></p>
+
+
+<style>
+  th:last-child,
+  td:last-child {
+    text-align: right;
+  }
+</style>

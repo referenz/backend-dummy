@@ -1,0 +1,101 @@
+---
+import WorkflowFormsIBK from "./Workflow_Forms_IBK.astro";
+import WorkflowFormsFormell from "./Workflow_Forms_Formell.astro";
+import WorkflowFormsSachlich from "./Workflow_Forms_Sachlich.astro";
+import WorkflowFormsAbschluss from "./Workflow_Forms_Abschluss.astro";
+---
+
+<div class="accordion" id="ibk-formular-accordion">
+  <!-- INTERESSENBEKUNDUNG -->
+  <div class="accordion-item">
+    <h4 class="accordion-header">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseOne"
+        aria-expanded="true"
+        aria-controls="collapseOne"
+      >
+        Interessenbekundung
+      </button>
+    </h4>
+    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#ibk-formular-accordion">
+      <div class="accordion-body"><WorkflowFormsIBK /></div>
+    </div>
+  </div>
+  <!--  FORMELLE PRÜFUNG -->
+  <div class="accordion-item">
+    <h4 class="accordion-header">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseTwo"
+        aria-expanded="true"
+        aria-controls="collapseTwo"
+      >
+        Formelle Prüfung
+      </button>
+    </h4>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ibk-formular-accordion">
+      <div class="accordion-body"><WorkflowFormsFormell /></div>
+    </div>
+  </div>
+  <!--  SACHLICHE PRÜFUNG -->
+  <div class="accordion-item">
+    <h4 class="accordion-header">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseThree"
+        aria-expanded="true"
+        aria-controls="collapseThree"
+      >
+        Sachliche Prüfung
+      </button>
+    </h4>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#ibk-formular-accordion">
+      <div class="accordion-body"><WorkflowFormsSachlich /></div>
+    </div>
+  </div>
+  <!-- ABSCHLUSS -->
+  <div class="accordion-item">
+    <h4 class="accordion-header">
+      <button
+        class="accordion-button collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseFour"
+        aria-expanded="true"
+        aria-controls="collapseFour"
+      >
+        Abschluss
+      </button>
+    </h4>
+    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#ibk-formular-accordion">
+      <div class="accordion-body"><WorkflowFormsAbschluss /></div>
+    </div>
+  </div>
+</div>
+
+<style>
+  h4 {
+    font-size: 1em;
+    font-weight: bold;
+  }
+
+  h4.accordion-header button::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"/><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/></svg>');
+    margin-right: 0.5em;
+  }
+
+  div.accordion-body {
+    font-size: 90%;
+  }
+</style>

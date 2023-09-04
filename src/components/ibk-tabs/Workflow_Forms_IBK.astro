@@ -1,0 +1,42 @@
+---
+import ButtonView from "../ButtonView.astro";
+import ButtonPDF from "../ButtonPDF.astro";
+---
+
+<table class="table table-light align-middle table-hover">
+  <thead>
+    <tr>
+      <th>Formular</th>
+      <th>Letzte Änderung</th>
+      <th>Status</th>
+      <th>Aktion</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>IBK-Formular</td><td>2024-05-24, 8:21 Uhr</td><td>Abgeschlossen</td><td
+        ><ButtonView /> {"  "} <ButtonPDF /></td
+      >
+    </tr>
+    <tr>
+      <td>Anlage XyZ</td><td>2024-05-20, 14:55 Uhr</td><td>Hochgeladen</td><td><ButtonPDF /></td>
+    </tr>
+    <tr>
+      <td>Anlage Foobar</td><td>2024-05-20, 14:58 Uhr</td><td>Hochgeladen</td><td><ButtonPDF /></td>
+    </tr>
+    <tr>
+      <td>Anlage Lorem</td><td>2024-06-02, 8:00 Uhr</td><td>Von Regiestelle hinzugefügt</td><td><ButtonPDF /></td>
+    </tr>
+  </tbody>
+</table>
+
+<p class="text-end"><button type="button" class="btn btn-primary btn-sm">Anlage hinzufügen</button></p>
+
+<p>Interessenbekundung eingereicht: 2024-05-29, 14:58 Uhr</p>
+
+<style>
+  th:last-child,
+  td:last-child {
+    text-align: right;
+  }
+</style>

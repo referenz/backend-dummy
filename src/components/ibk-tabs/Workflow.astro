@@ -1,1 +1,33 @@
+---
+import WorkflowForms from "./Workflow_Forms.astro";
+---
+
+<h3>Formulare</h3>
+<WorkflowForms />
+
 <h3>Workflow</h3>
+<ul>
+  <li>Antrag wurde angelegt</li>
+  <li>Antrag eingegangen</li>
+  <li>Eingangsbestätigung versendet</li>
+  <li>Formelle Prüfung: Prüfvermerk</li>
+  <li>Formelle Prüfung: Votum</li>
+  <li>Sachliche Prüfung: Gutachten 1</li>
+  <li>Sachliche Prüfung: Gutachten 2</li>
+  <li>Sachliche Prüfung: Prüfvermerk</li>
+  <li>Sachliche Prüfung: Votum</li>
+  <li>Antragsaufforderung</li>
+</ul>
+
+<style>
+  h3 {
+    font-size: 1.15em;
+    font-weight: bold;
+  }
+
+  h3:nth-of-type(n + 2) {
+    margin-top: 1em;
+    padding-top: 0.5em;
+    border-top: thin solid #ccc;
+  }
+</style>
