@@ -9,9 +9,11 @@ function getStatusClass(status: string) {
     switch (status) {
         case "Angelegt":
             return "bg-secondary";
-        case "Sachlich abgelehnt":
+        case "Sachlich abgelehnt vorbereitet":
+        case "Sachlich abgelehnt versendet":
             return "bg-warning text-dark";
-        case "Antragsaufforderung":
+        case "Antragsaufforderung vorbereitet":
+        case "Antragsaufforderung versendet":
             return "bg-success";
         default:
             return "bg-primary";
@@ -23,8 +25,8 @@ function getStatusClass(status: string) {
     const items = ibk.flat();
     const statusClass = getStatusClass(items[4]!);
     return (
-    <tr>
-        <td class="dok-nr"><a href="79R01E/">{items[0]}</a></td>
+    <tr class="position-relative">
+        <td class="dok-nr"><a class="stretched-link" href="79R01E/">{items[0]}</a></td>
         <td>{items[1]}</td>
         <td class="projekt">{items[2]}</td>
         <td>{items[3]}</td>
@@ -43,10 +45,8 @@ function getStatusClass(status: string) {
         font-weight: bold;
         font-size: 1.1em;
     }
-    /*
     .badge {
         white-space: normal;
         text-align: left;
     }
-    */
 </style>

@@ -25,7 +25,7 @@ import TopRow from '../components/TopRow.astro';
 	</head>
 	<body>
 		<header><TopRow /></header>
-		<nav><NavCol /></nav>
+		<nav><slot name="nav"><NavCol /></slot></nav>
 		<main><slot /></main>
 	</body>
 </html>

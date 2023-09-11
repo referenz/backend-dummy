@@ -1,0 +1,101 @@
+---
+import NavCol from "../../../components/sv/NavCol.astro";
+import Layout from "../../../layouts/Layout.astro";
+import Uebersicht from "../../../components/sv/Uebersicht.astro";
+import Interessenkollisionen from "../../../components/sv/Interessenkollisionen.astro";
+import Gutachten from "../../../components/sv/Gutachten.astro";
+---
+
+<Layout title=Gutachter-Seite">
+  <NavCol slot="nav" />
+  <h2>Gutachten Max Mustermann</h2>
+
+  <ul class="nav nav-tabs" id="ibk-tabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link active"
+        id="uebersicht-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#uebersicht-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="uebersicht-tab-pane"
+        aria-selected="true">Übersicht</button
+      >
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="interessenkollisionen-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#interessenkollisionen-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="interessenkollisionen-tab-pane"
+        aria-selected="true">Interessenkollisionen</button
+      >
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="gutachten-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#gutachten-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="gutachten-tab-pane"
+        aria-selected="false">Gutachten</button
+      >
+    </li>
+    <li class="nav-item" role="presentation">
+      <button
+        class="nav-link"
+        id="kommunikation-tab"
+        data-bs-toggle="tab"
+        data-bs-target="#kommunikation-tab-pane"
+        type="button"
+        role="tab"
+        aria-controls="kommunikation-tab-pane"
+        aria-selected="false">Kommunikationsverlauf</button
+      >
+    </li>
+  </ul>
+
+  <div class="tab-content" id="ibk-tabsContent">
+    <div
+      class="tab-pane fade show active"
+      id="uebersicht-tab-pane"
+      role="tabpanel"
+      aria-labelledby="uebersicht-tab"
+      tabindex="0"
+    >
+      <Uebersicht />
+    </div>
+    <div
+      class="tab-pane fade"
+      id="interessenkollisionen-tab-pane"
+      role="tabpanel"
+      aria-labelledby="interessenkollisionen-tab"
+      tabindex="0"
+    >
+      <Interessenkollisionen />
+    </div>
+    <div class="tab-pane fade" id="gutachten-tab-pane" role="tabpanel" aria-labelledby="gutachten-tab" tabindex="0">
+        <Gutachten />
+    </div>
+    <div class="tab-pane fade" id="kommunikation-tab-pane" role="tabpanel" aria-labelledby="kommunikation-tab" tabindex="0">
+      [alle aus den Workflow generierten Mails hier nochmal als Listenansicht]
+    </div>
+  </div>
+</Layout>
+
+<style>
+  h2 {
+    font-size: 1em;
+  }
+
+  div.tab-pane {
+    margin-top: 0.5em;
+    font-size: 90%;
+  }
+</style>

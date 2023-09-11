@@ -1,0 +1,75 @@
+<section>
+  <h2>
+    <a data-bs-toggle="collapse" href="#ibk-items" role="button" aria-expanded="false" aria-controls="ibk-items"
+      >IBK-Gutachten</a
+    >
+  </h2>
+  <ul class="collapsed show" id="ibk-items">
+    <li>
+      <a href={import.meta.env.BASE_URL + "sv/interessenbekundungsverfahren/"} id="ibk-link">Gutachten</a>
+    </li>
+  </ul>
+
+
+</section>
+
+<style>
+  section {
+    font-size: 92.5%;
+    margin-top: 1em;
+  }
+
+  h2 {
+    font-size: 1em;
+    margin-bottom: 0;
+    padding-bottom: 0.15em;
+    font-weight: bold;
+  }
+
+  h2 a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  ul + h2 {
+    margin-top: 0.67em;
+  }
+
+  h2 a.collapsed::before {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16"><path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/></svg>')
+      " ";
+  }
+
+  h2 a:not(.collapsed)::before {
+    content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16"><path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/></svg>')
+      " ";
+  }
+
+  h2 + ul {
+    margin-top: 0;
+  }
+
+  ul {
+    padding-left: 0.5em;
+  }
+
+  ul li {
+    list-style-type: none;
+    padding-bottom: 0.15em;
+  }
+
+  ul li a::before {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding-right: 1.25em;
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    vertical-align: -0.125em;
+    content: "";
+  }
+
+  #ibk-link::before {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16"><path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zM5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1H5zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1H5z"/><path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1z"/></svg>');
+  }
+</style>
